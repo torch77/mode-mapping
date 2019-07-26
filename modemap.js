@@ -24,7 +24,11 @@ var modemap = function() {
                     return color
                 }
             },
-            jet: function(val_col, min_sat, max_sat) {
+            jet: function(val_col) {
+                // get max, min from data
+                min_sat = Math.min(content[idx][val_col])
+                max_sat = Math.max(content[idx][val_col])
+
                 var componentToHex = function(c) {
                     var hex = c.toString(16);
                     return hex.length == 1 ? "0" + hex : hex;
