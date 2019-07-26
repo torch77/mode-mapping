@@ -68,9 +68,9 @@ var modemap = function() {
 
                 return function(content, idx) {
                     // get max, min from data
-                    min_sat = Math.min(content[idx][val_col])
-                    max_sat = Math.max(content[idx][val_col])
-                    return colors.hex[colors.index(min_sat, max_sat, content[idx][val_col])]
+                    // min_sat = Math.min(content[idx][val_col])
+                    // max_sat = Math.max(content[idx][val_col])
+                    return colors.hex[colors.index(Math.min(content[idx][val_col]), Math.max(content[idx][val_col]), content[idx][val_col])]
                 }
             }
         }
